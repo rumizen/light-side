@@ -3,12 +3,14 @@ import './Header.scss';
 import FavoritesBar from '../FavoritesBar/FavoritesBar.js';
 import NavBar from "../NavBar/NavBar.js";
 
-const Header = () => {
+const Header = ({ faveCount }) => {
   return (
     <header className="header">
       <h1>Dark Side</h1>
-      <FavoritesBar />
-      <NavBar />
+      <div className="nav-button-style">
+        <FavoritesBar faveCount={faveCount}/>
+        <NavBar />
+      </div>
     </header>
   );
 };

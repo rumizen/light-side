@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="app">
         <ScrollContainer movie={this.state.movie} />
-        <Header />
+        <Header faveCount={this.state.faveCount}/>
         <CardContainer />
       </div>
     );
