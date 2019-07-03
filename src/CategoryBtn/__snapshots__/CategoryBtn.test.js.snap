@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryBtn should match the CategoryBtn snapshot 1`] = `ShallowWrapper {}`;

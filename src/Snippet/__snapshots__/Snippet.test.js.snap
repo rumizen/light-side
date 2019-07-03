@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snippet should match the Snippet snapshot 1`] = `ShallowWrapper {}`;
