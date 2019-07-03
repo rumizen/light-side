@@ -21,6 +21,14 @@ class App extends Component {
     };
   }
 
+  updateFaveCount = bool => {
+      if (bool) {
+        this.setState({ faveCount: this.state.faveCount + 1 });
+      } else {
+        this.setState({ faveCount: this.state.faveCount - 1 });
+      }
+  }
+
   cleanPeople = data => {
     return data.map(unit => {
       return {
@@ -111,17 +119,32 @@ class App extends Component {
         <Route
           exact
           path="/people"
-          render={() => <CardContainer category={this.state.people} />}
+          render={() => (
+            <CardContainer
+              category={this.state.people}
+              updateFaveCount={this.updateFaveCount}
+            />
+          )}
         />
         <Route
           exact
           path="/vehicles"
-          render={() => <CardContainer category={this.state.vehicles} />}
+          render={() => (
+            <CardContainer
+              category={this.state.vehicles}
+              updateFaveCount={this.updateFaveCount}
+            />
+          )}
         />
         <Route
           exact
           path="/planets"
-          render={() => <CardContainer category={this.state.planets} />}
+          render={() => (
+            <CardContainer
+              category={this.state.planets}
+              updateFaveCount={this.updateFaveCount}
+            />
+          )}
         />
       </div>
     );
