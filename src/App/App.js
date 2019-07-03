@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Data from '../mock-people.js';
 import "./App.scss";
 import ScrollContainer from '../ScrollContainer/ScrollContainer.js';
 import Header from "../Header/Header.js";
@@ -63,7 +64,7 @@ class App extends Component {
       <div className="app">
         <ScrollContainer movie={this.state.movie} />
         <Header faveCount={this.state.faveCount}/>
-        <CardContainer />
+        <CardContainer category={this.state.people} />
       </div>
     );
   }

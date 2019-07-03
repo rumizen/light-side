@@ -6,17 +6,22 @@ import Snippet from '../Snippet/Snippet.js';
 class Card extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      isFavorited: false
+    };
   }
 
   render() {
-    const snippets = this.props.map(info => {
-      return <Snippet category={info.title} text={info.text} />
+    const snippets = Object.keys(this.props).map(snippet => {
+      return <Snippet
+        category={snippet}
+        text={this.props[snippet]}
+        />
     });
 
     return (
-      <section className="card">
-        <h2>Card Title</h2>
+      <section className="card" id={Date.now()} key={Date.now()}>
+        <h2>{this.props.name}</h2>
         {snippets}
         <div>
           <img />
