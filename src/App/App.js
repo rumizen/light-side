@@ -104,6 +104,7 @@ class App extends Component {
         <img
           src="https://img.wallpapersafari.com/desktop/1920/1080/38/65/Fcx7LA.jpg"
           alt="Darth Vader"
+          className="background-img"
         />
         <ScrollContainer movie={this.state.movie} />
         <Header faveCount={this.state.faveCount} />
