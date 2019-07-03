@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import '../images/star.png';
+import '../images/starfav.png';
 import './Card.scss';
 import Snippet from '../Snippet/Snippet.js';
 
@@ -9,6 +11,10 @@ class Card extends Component {
     this.state = {
       isFavorited: false
     };
+  }
+
+  favoriteCard = () => {
+    this.setState({ isFavorited: !this.state.isFavorited })
   }
 
   render() {
@@ -23,9 +29,11 @@ class Card extends Component {
       <section className="card" id={Date.now()} key={Date.now()}>
         <h2>{this.props.name}</h2>
         {snippets}
-        <div>
-          <img />
-          <img />
+        <div onClick={e => this.favoriteCard()}>
+          {!this.state.isFavorited && 
+          <img src={require('../images/star.png')} alt='' className='fav-icon'/> }
+          {this.state.isFavorited && 
+          <img src={require('../images/starfav.png')} alt='' className='fav-icon'/> }      
         </div>
       </section>
     );
