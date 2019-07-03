@@ -15,6 +15,9 @@ class Card extends Component {
 
   favoriteCard = () => {
     this.setState({ isFavorited: !this.state.isFavorited })
+    setTimeout(() => {
+      this.props.updateFaveCount(this.state.isFavorited);
+    })
   }
 
   render() {
@@ -29,7 +32,7 @@ class Card extends Component {
       <section className="card" id={Date.now()} key={Date.now()}>
         <h2>{this.props.name}</h2>
         {snippets}
-        <div onClick={e => this.favoriteCard()}>
+        <div onClick={this.favoriteCard}>
           {!this.state.isFavorited && 
           <img src={require('../images/star.png')} alt='' className='fav-icon'/> }
           {this.state.isFavorited && 

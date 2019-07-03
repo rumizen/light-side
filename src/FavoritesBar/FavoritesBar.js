@@ -10,4 +10,4 @@ const FavoritesBar = ({ faveCount }) => {
   );
 };
 
-export default FavoritesBar;
+export default FavoritesBar; 

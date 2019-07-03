@@ -5,7 +5,7 @@ import Card from '../Card/Card.js';
 const CardContainer = props => {
   const allCards = props.category.map(thing => {
     return (
-      <Card {...thing}/>
+      <Card {...thing} updateFaveCount={props.updateFaveCount}/>
     );
   });
 
