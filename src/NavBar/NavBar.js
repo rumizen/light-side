@@ -1,13 +1,13 @@
 import React from "react";
 import "./NavBar.scss";
-import CategoryBtn from '../CategoryBtn/CategoryBtn.js';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <nav className="nav-bar">
-      <CategoryBtn name="people" icon="👥" />
-      <CategoryBtn name="planets" icon="🌍" />
-      <CategoryBtn name="vehicles" icon="🚀" />
+      <NavLink to="/people" className="nav-btn">People</NavLink>
+      <NavLink to="/vehicles" className="nav-btn">Vehicles</NavLink>
+      <NavLink to="/planets" className="nav-btn">Planets</NavLink>
     </nav>
   );
 };

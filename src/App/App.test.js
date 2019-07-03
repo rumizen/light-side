@@ -16,7 +16,7 @@ describe("App", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip('should be able to get the crawl from a random movie', () => {
+  it('should be able to get the crawl from a random movie', () => {
     const wrapper = shallow(<App />);
     const movies = [
       { opening_crawl: "A long time ago" },
@@ -31,6 +31,8 @@ describe("App", () => {
       { opening_crawl: "Far far away" }
     ];
 
-    expect(wrapper.instance().chooseMovie(movies)).toEqual();
+    const result = wrapper.instance().chooseMovie(movies);
+
+    expect(movies.includes(result)).toEqual(true);
   });
 });
