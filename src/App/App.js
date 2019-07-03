@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Data from "../mock-people.js";
+import People from "../mock-people.js";
+import Vehicles from "../mock-vehicles.js";
+import Planets from "../mock-planets.js";
 import { Route } from "react-router-dom";
 import "./App.scss";
 import ScrollContainer from "../ScrollContainer/ScrollContainer.js";
