@@ -16,7 +16,7 @@ class Card extends Component {
   favoriteCard = () => {
     this.setState({ isFavorited: !this.state.isFavorited })
     setTimeout(() => {
-      this.props.updateFaveCount(this.state.isFavorited);
+      this.props.updateFavorites({...this.props}, this.state.isFavorited);
     })
   }
 
