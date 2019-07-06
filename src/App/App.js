@@ -22,6 +22,15 @@ class App extends Component {
     };
   }
 
+  updateFavorite = name => {
+    const targetCard = [...this.state.people, ...this.state.planets, ...this.state.vehicles].find(card => {
+      return card.Name == name;
+    });
+    console.log(targetCard)
+    targetCard.isFav = !targetCard.isFav;
+    this.updateFavorites(targetCard, targetCard.isFav);
+  }
+
   updateFavorites = (card, bool) => {
       if (bool) {
         this.setState({ faveCount: this.state.faveCount + 1 });
@@ -37,7 +46,7 @@ class App extends Component {
   }
 
   removeFavorite = () => {
-    const filteredFavorites = this.state.favorites.filter(fav => fav.state.isFavorited);
+    const filteredFavorites = this.state.favorites.filter(fav => fav.isFav);
     this.setState({ favorites: filteredFavorites });
   }
 
@@ -48,7 +57,8 @@ class App extends Component {
         Gender: unit.gender,
         EyeColor: unit.eye_color,
         Height: unit.height,
-        BirthYear: unit.birth_year
+        BirthYear: unit.birth_year,
+        isFav: false
       };
     });
   };
@@ -59,7 +69,8 @@ class App extends Component {
         Name: unit.name,
         Terrain: unit.terrain,
         Diameter: unit.diameter,
-        Population: unit.population
+        Population: unit.population,
+        isFav: false
       };
     });
   };
@@ -70,7 +81,8 @@ class App extends Component {
         Name: unit.name,
         Model: unit.model,
         Class: unit.vehicle_class,
-        Passnegers: unit.passengers
+        Passnegers: unit.passengers,
+        isFav: false
       };
     });
   };
@@ -135,6 +147,7 @@ class App extends Component {
             <CardContainer
               category={this.state.people}
               updateFavorites={this.updateFavorites}
+              updateFavorite={this.updateFavorite}
             />
           )}
         />
@@ -145,6 +158,7 @@ class App extends Component {
             <CardContainer
               category={this.state.vehicles}
               updateFavorites={this.updateFavorites}
+              updateFavorite={this.updateFavorite}
             />
           )}
         />
@@ -155,6 +169,7 @@ class App extends Component {
             <CardContainer
               category={this.state.planets}
               updateFavorites={this.updateFavorites}
+              updateFavorite={this.updateFavorite}
             />
           )}
         />
@@ -165,6 +180,7 @@ class App extends Component {
             <CardContainer
               category={this.state.favorites}
               updateFavorites={this.updateFavorites}
+              updateFavorite={this.updateFavorite}
             />
           )}
         />
