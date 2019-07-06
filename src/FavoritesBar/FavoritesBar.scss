@@ -1,0 +1,13 @@
+.favorites-bar {
+  // -webkit-appearance: none;
+  background-color: rgb(194, 191, 34);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+}
