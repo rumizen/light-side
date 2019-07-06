@@ -22,11 +22,10 @@ class App extends Component {
     };
   }
 
-  updateFavorite = name => {
+  toggleFavorite = name => {
     const targetCard = [...this.state.people, ...this.state.planets, ...this.state.vehicles].find(card => {
       return card.Name == name;
     });
-    console.log(targetCard)
     targetCard.isFav = !targetCard.isFav;
     this.updateFavorites(targetCard, targetCard.isFav);
   }
@@ -147,7 +146,7 @@ class App extends Component {
             <CardContainer
               category={this.state.people}
               updateFavorites={this.updateFavorites}
-              updateFavorite={this.updateFavorite}
+              toggleFavorite={this.toggleFavorite}
             />
           )}
         />
@@ -158,7 +157,7 @@ class App extends Component {
             <CardContainer
               category={this.state.vehicles}
               updateFavorites={this.updateFavorites}
-              updateFavorite={this.updateFavorite}
+              toggleFavorite={this.toggleFavorite}
             />
           )}
         />
@@ -169,7 +168,7 @@ class App extends Component {
             <CardContainer
               category={this.state.planets}
               updateFavorites={this.updateFavorites}
-              updateFavorite={this.updateFavorite}
+              toggleFavorite={this.toggleFavorite}
             />
           )}
         />
@@ -180,7 +179,7 @@ class App extends Component {
             <CardContainer
               category={this.state.favorites}
               updateFavorites={this.updateFavorites}
-              updateFavorite={this.updateFavorite}
+              toggleFavorite={this.toggleFavorite}
             />
           )}
         />

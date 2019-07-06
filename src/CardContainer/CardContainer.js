@@ -8,7 +8,7 @@ const CardContainer = props => {
       <Card
         {...thing}
         updateFavorites={props.updateFavorites}
-        updateFavorite={props.updateFavorite}
+        toggleFavorite={props.toggleFavorite}
       />
     );
   });
