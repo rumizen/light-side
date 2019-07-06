@@ -15,18 +15,30 @@ class App extends Component {
       people: [],
       planets: [],
       vehicles: [],
+      favorites: [],
       faveCount: 0,
       movie: "",
       error: ""
     };
   }
 
-  updateFaveCount = bool => {
+  updateFavorites = (card, bool) => {
       if (bool) {
         this.setState({ faveCount: this.state.faveCount + 1 });
+        this.addFavorite(card);
       } else {
         this.setState({ faveCount: this.state.faveCount - 1 });
+        this.removeFavorite();
       }
+  }
+
+  addFavorite = card => {
+    this.setState({ favorites: [...this.state.favorites, card] })
+  }
+
+  removeFavorite = () => {
+    const filteredFavorites = this.state.favorites.filter(fav => fav.state.isFavorited);
+    this.setState({ favorites: filteredFavorites });
   }
 
   cleanPeople = data => {
@@ -102,7 +114,7 @@ class App extends Component {
   };
 
   chooseMovie = data => {
-    const randomIndex = Math.floor(Math.random() * Math.floor(10));
+    const randomIndex = Math.floor(Math.random() * Math.floor(7));
     return data[randomIndex].opening_crawl;
   };
 
@@ -122,7 +134,7 @@ class App extends Component {
           render={() => (
             <CardContainer
               category={this.state.people}
-              updateFaveCount={this.updateFaveCount}
+              updateFavorites={this.updateFavorites}
             />
           )}
         />
@@ -132,7 +144,7 @@ class App extends Component {
           render={() => (
             <CardContainer
               category={this.state.vehicles}
-              updateFaveCount={this.updateFaveCount}
+              updateFavorites={this.updateFavorites}
             />
           )}
         />
@@ -142,7 +154,17 @@ class App extends Component {
           render={() => (
             <CardContainer
               category={this.state.planets}
-              updateFaveCount={this.updateFaveCount}
+              updateFavorites={this.updateFavorites}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/favorites"
+          render={() => (
+            <CardContainer
+              category={this.state.favorites}
+              updateFavorites={this.updateFavorites}
             />
           )}
         />
