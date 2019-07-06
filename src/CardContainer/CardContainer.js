@@ -1,6 +1,6 @@
 import React from "react";
 import "./CardContainer.scss";
-import Card from '../Card/Card.js';
+import Card from "../Card/Card.js";
 
 const CardContainer = props => {
   const allCards = props.category.map(thing => {
@@ -15,7 +15,10 @@ const CardContainer = props => {
 
   return (
     <main className="card-container">
-      {allCards}
+      <>
+        {props.category.length === 0 && <h2>Choose some favorites bruh!</h2>}
+        {allCards}
+      </>
     </main>
   );
 };
