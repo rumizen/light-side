@@ -1,8 +1,20 @@
 .nav-btn {
+  // -webkit-appearance: none;
   background-color: rgb(77, 127, 202);
-  border: solid 2px;
-  box-shadow: 4px 4px 5px white;
-  height: 62px;
-  margin: 0px 15px;
-  width: 90px;
+  border-radius: 3px;
+  // border: solid 2px;
+  // box-shadow: 4px 4px 5px white;
+  color: white;
+  display:flex;
+  border: none;
+  padding: 10px;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0px 3px;
+  width: 100px;
 }
+
+.nav-bar {
+  display: flex;
+}
+
