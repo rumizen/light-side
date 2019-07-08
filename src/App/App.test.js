@@ -99,5 +99,35 @@ describe("App", () => {
     expect(window.fetch).toHaveBeenCalledWith(url);
   });
 
+  it('should toggle isFav property from toggleFavorite', () => {
+    wrapper.setState({ people: mockFetchData})
+    wrapper.instance().toggleFavorite('Steve');
+    expect(wrapper.instance().state.people[0].isFav).toEqual(false)
+  })
+
+  it('should increment and decrement faveCount', () => {
+    wrapper.instance().updateFavorites({}, true);
+    expect(wrapper.instance().state.faveCount).toEqual(1);
+    wrapper.instance().updateFavorites({}, false)
+    expect(wrapper.instance().state.faveCount).toEqual(0);
+  })
   
+  it('should add card to favorites array', () => {
+    wrapper.instance().addFavorite(mockFetchData[0]);
+    expect(wrapper.instance().state.favorites.length).toEqual(1)
+    expect(wrapper.instance().state.favorites).toEqual([{
+      Name: 'Steve',
+      Model: 'Giselle',
+      Class: '1st',
+      Passnegers: 'all of em',
+      isFav: true
+    }])
+  })
+
+  it('should remove cards from favorite array', () => {
+    wrapper.instance().addFavorite(mockFetchData[1]);
+    expect(wrapper.instance().state.favorites.length).toEqual(1)
+    wrapper.instance().removeFavorite(mockFetchData[1]);
+    expect(wrapper.instance().state.favorites.length).toEqual(0)
+  })
 });
