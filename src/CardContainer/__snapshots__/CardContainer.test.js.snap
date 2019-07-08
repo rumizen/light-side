@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardContainer should match the CardContainer snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`CardContainer should match the CardContainer snapshot with no favorites 1`] = `ShallowWrapper {}`;
