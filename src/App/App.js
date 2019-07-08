@@ -17,7 +17,7 @@ class App extends Component {
       vehicles: [],
       favorites: [],
       faveCount: 0,
-      movie: "",
+      movie: {},
       error: ""
     };
   }
@@ -126,7 +126,7 @@ class App extends Component {
 
   chooseMovie = data => {
     const randomIndex = Math.floor(Math.random() * Math.floor(7));
-    return data[randomIndex].opening_crawl;
+    return data[randomIndex];
   };
 
   render() {

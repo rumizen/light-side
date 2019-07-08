@@ -32,7 +32,7 @@ describe("App", () => {
       planets: [],
       vehicles: [],
       faveCount: 0,
-      movie: "",
+      movie: {},
       error: ""})
   })
 
