@@ -47,24 +47,4 @@ describe("App", () => {
   it("should be able to create a filtered mapped array of vehicle data", () => {
     expect(wrapper.instance().cleanVehicles(Vehicles.results).length).toEqual(10)
   })
-
-  // it('should be able to get the crawl from a random movie', () => {
-  //   const wrapper = shallow(<App />);
-  //   const movies = [ 
-  //     { opening_crawl: "A long time ago" },
-  //     { opening_crawl: "In a galaxy" },
-  //     { opening_crawl: "Far far away" },
-  //     { opening_crawl: "A long time ago" },
-  //     { opening_crawl: "In a galaxy" },
-  //     { opening_crawl: "Far far away" },
-  //     { opening_crawl: "A long time ago" },
-  //     { opening_crawl: "In a galaxy" },
-  //     { opening_crawl: "Far far away" },
-  //     { opening_crawl: "Far far away" }
-  //   ];
-
-  //   const result = wrapper.instance().chooseMovie(movies);
-
-  //   expect(movies.includes(result)).toEqual(true);
-  // });
 });

@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card should match the card snapshot 1`] = `ShallowWrapper {}`;
+exports[`Card should match the card snapshot 1`] = `ReactWrapper {}`;
+
+exports[`Card should match the snapshot when favorited 1`] = `ReactWrapper {}`;
