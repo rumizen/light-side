@@ -14,9 +14,32 @@ const router = (
 
 describe("App", () => {
   let wrapper;
+  let mockFetchData;
   beforeEach(function() {
+    mockFetchData = [
+      {
+        Name: 'Steve',
+        Model: 'Giselle',
+        Class: '1st',
+        Passnegers: 'all of em',
+        isFav: true
+      },
+      {
+        Name: 'DeMarcus',
+        Model: 'All of em',
+        Class: 'All of it',
+        Passnegers: 'Aliens',
+        isFav: false
+      }
+    ];
     wrapper = shallow(<App/>);
-  })
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        json: () => Promise.resolve(mockFetchData)
+      })
+    });
+  });
+
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(router, div);
@@ -34,17 +57,47 @@ describe("App", () => {
       faveCount: 0,
       movie: {},
       error: ""})
-  })
+  });
 
   it("should be able to create a filtered mapped array of people data", () => {
     expect(wrapper.instance().cleanPeople(People.results).length).toEqual(10);
-  })
+  });
 
   it("should be able to create a filtered mapped array of planet data", () => {
     expect(wrapper.instance().cleanPlanets(Planets.results).length).toEqual(10);
-  })
+  });
 
   it("should be able to create a filtered mapped array of vehicle data", () => {
     expect(wrapper.instance().cleanVehicles(Vehicles.results).length).toEqual(10)
-  })
+  });
+
+  it("getPeople should fetch data correctly", () => {
+    const url = "https://swapi.co/api/people/?page=1";
+    
+    wrapper.instance().getPeople();
+    expect(window.fetch).toHaveBeenCalledWith(url);
+  });
+
+  it("getVehicles should fetch data correctly", () => {
+    const url = "https://swapi.co/api/vehicles/?page=1";
+
+    wrapper.instance().getVehicles();
+    expect(window.fetch).toHaveBeenCalledWith(url);
+  });
+
+  it("getPlanets should fetch data correctly", () => {
+    const url = "https://swapi.co/api/planets/?page=1";
+
+    wrapper.instance().getPlanets();
+    expect(window.fetch).toHaveBeenCalledWith(url);
+  });
+
+  it("getFilms should fetch data correctly", () => {
+    const url = "https://swapi.co/api/films/?page=1";
+
+    wrapper.instance().getFilms();
+    expect(window.fetch).toHaveBeenCalledWith(url);
+  });
+
+  
 });

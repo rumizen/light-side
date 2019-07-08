@@ -94,7 +94,7 @@ class App extends Component {
   }
 
   getPeople = () => {
-    fetch("https://swapi.co/api/people/?page=1")
+    return fetch("https://swapi.co/api/people/?page=1")
       .then(response => response.json())
       .then(data => this.cleanPeople(data.results))
       .then(cleanData => this.setState({ people: cleanData }))
@@ -102,7 +102,7 @@ class App extends Component {
   };
 
   getPlanets = () => {
-    fetch("https://swapi.co/api/planets/?page=1")
+    return fetch("https://swapi.co/api/planets/?page=1")
       .then(response => response.json())
       .then(data => this.cleanPlanets(data.results))
       .then(cleanData => this.setState({ planets: cleanData }))
@@ -110,7 +110,7 @@ class App extends Component {
   };
 
   getVehicles = () => {
-    fetch("https://swapi.co/api/vehicles/?page=1")
+    return fetch("https://swapi.co/api/vehicles/?page=1")
       .then(response => response.json())
       .then(data => this.cleanVehicles(data.results))
       .then(cleanData => this.setState({ vehicles: cleanData }))
@@ -118,7 +118,7 @@ class App extends Component {
   };
 
   getFilms = () => {
-    fetch("https://swapi.co/api/films/?page=1")
+    return fetch("https://swapi.co/api/films/?page=1")
       .then(response => response.json())
       .then(data => this.setState({ movie: this.chooseMovie(data.results) }))
       .catch(error => this.setState({ error: error.message }));
