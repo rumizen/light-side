@@ -3,4 +3,10 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 24px;
+  animation: fader 1.5s;
+}
+
+@keyframes fader {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

@@ -7,7 +7,7 @@ const ScrollContainer = ({ movie }) => {
   return (
     <Crawl
       className="scroll-container"
-      title={movie.episode_id}
+      title={`Episode ${movie.episode_id}`}
       subTitle={movie.title}
       text={movie.opening_crawl}
       height="20%"
