@@ -12,9 +12,15 @@
   text-decoration: none;
   margin: 0px 3px;
   width: 100px;
+  &:hover {
+    opacity: .7;
+    transform: scale(1.05);
+  }
+  &:active {
+    background-color: #f08e26;
+  }
 }
 
 .nav-bar {
   display: flex;
 }
-

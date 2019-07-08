@@ -19,7 +19,7 @@ const Card = props => {
     <section className="card" id={Date.now()} key={Date.now()}>
       <h2>{props.name}</h2>
       {snippets}
-      <div onClick={e => props.toggleFavorite(props.Name)}>
+      <div className="fav-div" onClick={e => props.toggleFavorite(props.Name)}>
         {!props.isFav && (
           <img
             src={require("../images/star.png")}
