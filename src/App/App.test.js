@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import People from "../mock-people.js";
 import Vehicles from "../mock-vehicles.js";
 import Planets from "../mock-planets.js";
-import { shallow, mount } from "enzyme";
+import { shallow } from "enzyme";
 import App from "./App";
 const router = (
   <BrowserRouter>

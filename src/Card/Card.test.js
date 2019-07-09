@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import { mount } from "enzyme";
 import Card from "./Card";
-import { jsxEmptyExpression } from "@babel/types";
 
 describe("Card", () => {
   let wrapper;
