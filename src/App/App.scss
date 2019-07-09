@@ -14,3 +14,14 @@
 .crawler {
   height: 200px;
 }
+
+.landing-page {
+  background: black;
+  // border: solid 2px white;
+  display: flex;
+  padding: 30px;
+  h2 {
+    color: white;
+    font-size: 4rem;
+  }
+}
