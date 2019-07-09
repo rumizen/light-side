@@ -24,6 +24,10 @@ Run `npm start` in your terminal. Go to `http://localhost:3000/` and you should 
 
 ![Load Page](https://media.giphy.com/media/Ynqx02O7Aot8CIbfjG/giphy.gif)
 
+![Switching Categories](https://media.giphy.com/media/lQ0JhltaNRj1DKwv3u/giphy.gif)
+
+![Favoriting Cards](https://media.giphy.com/media/gfqqp1L4OBsYjdsVcw/giphy.gif)
+
 ## Emphasis of the Project
 
 Further knowledge on the following technologies/principles:
