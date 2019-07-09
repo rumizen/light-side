@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import People from "../mock-people.js";
-import Vehicles from "../mock-vehicles.js";
-import Planets from "../mock-planets.js";
 import { Route } from "react-router-dom";
 import "./App.scss";
 import ScrollContainer from "../ScrollContainer/ScrollContainer.js";
@@ -24,7 +21,7 @@ class App extends Component {
 
   toggleFavorite = name => {
     const targetCard = [...this.state.people, ...this.state.planets, ...this.state.vehicles].find(card => {
-      return card.Name == name;
+      return card.Name === name;
     });
     targetCard.isFav = !targetCard.isFav;
     this.updateFavorites(targetCard, targetCard.isFav);
