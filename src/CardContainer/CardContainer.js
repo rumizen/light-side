@@ -1,6 +1,7 @@
 import React from "react";
 import "./CardContainer.scss";
 import Card from "../Card/Card.js";
+import PropTypes from "prop-types";
 
 const CardContainer = props => {
   const allCards = props.category.map(thing => {
@@ -21,6 +22,12 @@ const CardContainer = props => {
       </>
     </main>
   );
+};
+
+CardContainer.propTypes = {
+  category: PropTypes.array.isRequired,
+  updateFavorites: PropTypes.func.isRequired,
+  toggleFavorite: PropTypes.func.isRequired
 };
 
 export default CardContainer;

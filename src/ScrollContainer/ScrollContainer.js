@@ -2,6 +2,7 @@ import React from 'react';
 import "react-star-wars-crawl/lib/index.css";
 import './ScrollContainer.scss';
 import Crawl from "react-star-wars-crawl";
+import PropTypes from "prop-types";
 
 const ScrollContainer = ({ movie }) => {
   return (
@@ -13,6 +14,10 @@ const ScrollContainer = ({ movie }) => {
       height="20%"
     />
   );
+};
+
+ScrollContainer.propTypes = {
+  movie: PropTypes.object.isRequired
 }
 
 export default ScrollContainer;

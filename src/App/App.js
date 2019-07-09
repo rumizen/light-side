@@ -80,7 +80,7 @@ class App extends Component {
         Name: unit.name,
         Model: unit.model,
         Class: unit.vehicle_class,
-        Passnegers: unit.passengers,
+        Passengers: unit.passengers,
         isFav: false
       };
     });

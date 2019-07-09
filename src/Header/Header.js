@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
-import FavoritesBar from '../FavoritesBar/FavoritesBar.js';
 import NavBar from "../NavBar/NavBar.js";
+import PropTypes from "prop-types";
 
 const Header = ({ faveCount }) => {
   return (
@@ -11,5 +11,9 @@ const Header = ({ faveCount }) => {
     </header>
   );
 };
+
+Header.propTypes = {
+  faveCount: PropTypes.number.isRequired
+}
 
 export default Header;

@@ -2,6 +2,7 @@ import React from "react";
 import FavoritesBar from '../FavoritesBar/FavoritesBar'
 import "./NavBar.scss";
 import { NavLink } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 const NavBar = ({ faveCount }) => {
   return (
@@ -19,5 +20,9 @@ const NavBar = ({ faveCount }) => {
     </nav>
   );
 };
+
+NavBar.propTypes = {
+  faveCount: PropTypes.number.isRequired
+}
 
 export default NavBar;
