@@ -141,6 +141,20 @@ class App extends Component {
         <Header faveCount={this.state.faveCount} />
         <Route
           exact
+          path="/"
+          render={() => (
+            <section className='landing-page'>
+            <img src="https://cdn.dribbble.com/users/35682/screenshots/2507121/dribble-good-josephle.gif"
+            alt="Emporer Palpatine" />
+              <h2>Welcome to the DarkSide! Let your curiousity 
+                flow through you and select a catagory for more 
+                information. 
+              </h2>
+            </section>
+          )}
+        />
+        <Route
+          exact
           path="/people"
           render={() => (
             <CardContainer
