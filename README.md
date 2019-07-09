@@ -22,6 +22,7 @@ Run `npm start` in your terminal. Go to `http://localhost:3000/` and you should 
 
 ## Screenshots
 
+![Load Page](https://media.giphy.com/media/Ynqx02O7Aot8CIbfjG/giphy.gif)
 
 ## Emphasis of the Project
 
