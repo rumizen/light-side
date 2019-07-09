@@ -22,10 +22,15 @@ Run `npm start` in your terminal. Go to `http://localhost:3000/` and you should 
 
 ## Screenshots
 
+Load Page:
 ![Load Page](https://media.giphy.com/media/Ynqx02O7Aot8CIbfjG/giphy.gif)
 
+
+Switching Categories:
 ![Switching Categories](https://media.giphy.com/media/lQ0JhltaNRj1DKwv3u/giphy.gif)
 
+
+Favoriting Cards:
 ![Favoriting Cards](https://media.giphy.com/media/gfqqp1L4OBsYjdsVcw/giphy.gif)
 
 ## Emphasis of the Project
