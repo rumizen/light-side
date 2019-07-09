@@ -3,6 +3,7 @@ import "../images/star.png";
 import "../images/starfav.png";
 import "./Card.scss";
 import Snippet from "../Snippet/Snippet.js";
+import PropTypes from "prop-types";
 
 const Card = props => {
   const snippets = Object.keys(props).map(snippet => {
@@ -37,6 +38,13 @@ const Card = props => {
       </div>
     </section>
   );
+};
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  isFav: PropTypes.bool.isRequired,
+  updateFavorites: PropTypes.func.isRequired,
+  toggleFavorite: PropTypes.func.isRequired
 };
 
 export default Card;

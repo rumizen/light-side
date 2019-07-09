@@ -1,5 +1,6 @@
 import React from 'react';
 import './Snippet.scss';
+import PropTypes from "prop-types";
 
 const Snippet = ({ category, text }) => {
   return (
@@ -9,5 +10,10 @@ const Snippet = ({ category, text }) => {
     </article>
   );
 };
+
+Snippet.propTypes = {
+  category: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+}
 
 export default Snippet;
