@@ -1,4 +1,20 @@
 .snippet {
-  border-bottom: solid lightgray 1px;
+  padding-bottom: 10px;
+  border-bottom: solid rgba(0, 0, 0, 0.123) 1px;
   width: 90%;
+  h3, p {
+    margin: 5px;
+    padding: 0;
+    // color: rgba(13, 73, 177, 1);
+  }
+  h3 {
+    color: black;
+    font-weight: 100;
+    font-size: .8em;
+  }
+  p {
+    color: rgba(13, 73, 177, 1);
+    font-weight: 400;
+    font-size: 1.2em;
+  }
 }

@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Syncopate:400,700&display=swap');
+
 .header {
   background-color: #ADBED8;
+  // box-shadow: 9px 10px 26px -5px rgba(49,113,224,1);
   display: flex;
   justify-content: space-between;
   height: 150px;
   align-items: center;
   padding: 0;
   margin: 0;
+  opacity: 0.8;
+  padding: 0px 35px;
 }
 
 .nav-button-style {
@@ -14,7 +19,10 @@
   align-items: center;
 }
 
-h1 {
+.header h1 {
+  // margin-left: 35px;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
   font-size: 72px;
   text-shadow: 3px 3px 3px #3D434C;
 }

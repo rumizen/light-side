@@ -18,7 +18,6 @@ const Card = props => {
 
   return (
     <section className="card" id={Date.now()} key={Date.now()}>
-      <h2>{props.name}</h2>
       {snippets}
       <div className="fav-div" onClick={e => props.toggleFavorite(props.Name)}>
         {!props.isFav && (

@@ -17,7 +17,7 @@ const CardContainer = props => {
   return (
     <main className="card-container">
       <>
-        {props.category.length === 0 && <h2>Choose some favorites bruh!</h2>}
+        {props.category.length === 0 && <h2 className="no-fav-message">Choose some favorites bruh!</h2>}
         {allCards}
       </>
     </main>
